@@ -1,0 +1,263 @@
+body {
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+div#content {
+    width: 100%;
+    max-width: 600px;
+    min-height: 100vh;
+    background-color: white;
+}
+
+img {
+    vertical-align: middle;
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.progress-container {
+    width: calc(100% - 30px);
+    max-width: calc(100% - 20px);
+    height: 200px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.progress-container > div {
+    max-width: 24%;
+    position: relative;
+}
+
+p#text1, p#text2, p#text3, p#text4 {
+    margin: 0;
+    margin-top: 5px;
+    max-width: 80px;
+    min-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+}
+
+p#text1 {
+    left: 38px;
+}
+
+p#text2 {
+    left: 32px;
+}
+
+p#text3 {
+    left: 52px;
+}
+
+p#text4 {
+    left: 44px;
+}
+
+.progress-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.progress-bar {
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #B6B6B6 0%, #B6B6B6 100%);
+}
+
+.progress-bar2 {
+    width: 0;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    transition: width 0.8s ease-out;
+}
+
+.check-container {
+    width: 40px;
+}
+
+.check-container > img {
+    width: 40px;
+    height: auto;
+}
+
+section#more-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+section > h1 {
+    font-size: 25px;
+    color: #FF0000;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+section > h2 {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+section > p {
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 20px;
+}
+
+span.bold {
+    font-weight: bold;
+}
+
+span.bold2 {
+    font-weight: bold;
+    color: #254DDB;
+}
+
+span.bold3 {
+    font-weight: bold;
+    color: #00B309;
+}
+
+span.bold4 {
+    font-weight: bold;
+    color: #FF0000;
+}
+
+section > button {
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 10px 10px 10px 10px;
+    padding: 15px 30px 15px 30px;
+    background-color: #2D6EFF;
+    color: white;
+    border: none;
+    margin-top: 15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #FEFEFE;
+    padding: 20px;
+    border: 1px solid #888888;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+.modal-content > div#step1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 0.3s ease-out;
+}
+
+.modal-content > div#step1 > h1 {
+    font-size: 25px;
+    line-height: 29px;
+    text-align: left;
+    color: #000000;
+    font-weight: 700;
+    text-align: center;
+}
+
+.modal-content > div#step1 > p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+div#trace {
+    margin: 20px 0;
+}
+
+.modal-content > div#step2 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content > div#step2 > p {
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.modal-content > div#step2 > span#value {
+    color: #FF0000;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+}
+
+.modal-content > div#step2 > h1 {
+    font-size: 28px;
+    line-height: 20px;
+    text-align: center;
+    color: #00B309;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.modal-content > div#step2 > h1#value {
+    font-size: 60px;
+    text-decoration: none;
+}
+
+.modal-content > div#step2 > a {
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 10px 10px 10px 10px;
+    padding: 15px 30px 15px 30px;
+    background-color: #2D6EFF;
+    color: white;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.modal-content > div#step2 > p:last-child {
+    font-size: 15px;
+}
